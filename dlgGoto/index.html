@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dlgGoto.css">
+</head>
+<body>
+    <input type="button" id="popup" value="弹出对话框">
+    <hr>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./dlgGoto.js"></script>
+    <script>
+        $(function(){
+            var $btnDlg=$('#popup');
+            $btnDlg.click(function(){
+                $dlgGoto.show({
+                    num:6,
+                    title:'同意',
+                    onClick:function(){
+                        alert('就知道你会同意');
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

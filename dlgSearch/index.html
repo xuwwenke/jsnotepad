@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dlgSearch.css">
+</head>
+<body>
+    <div class="test">
+        <input type="button" value="弹出对话框" autofocus>
+    </div>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./dlgSearch.js"></script>
+    <script>
+        $(function() {
+        var $btnTest = $('div.test>input[type="button"]');
+        $btnTest.click(function() {
+            $dlgSearch.show(function(content) {
+                console.log("search btn click!");
+                console.log(content);
+            });
+        });
+        });
+    </script>
+</body>
+</html>
