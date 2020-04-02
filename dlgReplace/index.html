@@ -12,5 +12,17 @@
     <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./dlgReplace.js"></script>
+    <script>
+        $(function() {      
+            var $btnTest = $('div.test>input[type="button"]');       
+            $btnTest.click(function() {      
+                $dlgReplace.show({     
+                searchHandler: function(e) { console.log('search btn click.'); console.log(e); },     
+                replaceHandler: function(e) { console.log('replace btn click.'); console.log(e); },
+                replaceAllHandler: function(e) { console.log('replace all btn click.'); console.log(e); }      
+                });
+            });       
+        });      
+    </script>
 </body>
 </html>

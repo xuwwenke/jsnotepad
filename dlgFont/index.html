@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dlgFont.css">
+</head>
+<body>
+    <div class="test">
+        <input type="button" value="弹出对话框" autofocus>
+    </div>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./dlgFont.js"></script>
+    <script>
+        $(function() {
+            $btnTest = $('div.test>input[type="button"]');
+            $btnTest.click(function() {
+                $dlgFont.show();
+            });
+        });     
+    </script>
+</body>
+</html>
